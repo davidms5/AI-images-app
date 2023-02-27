@@ -1,5 +1,5 @@
-import Home from './Home';
-import CrearPost from './crearPost';
+import Home from './Home.jsx';
+import CrearPost from './crearPost.jsx';
 
 export {
   Home,
