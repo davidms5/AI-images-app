@@ -7,6 +7,14 @@ import {FormField, Loader} from '../components';
 
 
 const CrearPost = () =>{
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    name: '',
+    prompt:'',
+    image: '',
+  });
+
+  const [generatingImg, setGeneratingImg] = useState(false);
   return (
     <div>
     crear post
