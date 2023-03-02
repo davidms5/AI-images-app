@@ -24,6 +24,9 @@ const CrearPost = () =>{
 
   }
 
+  const handleSurpriseMe = () =>{
+
+  }
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
@@ -40,7 +43,7 @@ const CrearPost = () =>{
       type="text"
       name='name'
       placeholder='john'
-      value={form.name} {//ver de donde sale form.name}
+      value={form.name} 
       handleChange={handleChange}
        />
 
