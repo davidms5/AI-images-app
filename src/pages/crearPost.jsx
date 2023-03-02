@@ -27,6 +27,11 @@ const CrearPost = () =>{
   const handleSurpriseMe = () =>{
 
   }
+
+  const generateImage = () =>{
+
+  }
+
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
@@ -57,6 +62,42 @@ const CrearPost = () =>{
       isSurpriseMe
       handleSurpriseMe={handleSurpriseMe}
       />
+
+      <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center ">
+    {form.image ? (
+      <img
+      src={form.image}
+      alt={form.prompt}
+      className="w-full h-full object-contain"/>
+    ) : (
+      <img
+      src={preview}
+      alt="preview"
+      className=" w-9/12 h-9/12 object-contain opacity-40 "
+      />)}
+
+    {generatingImg && (
+      <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
+      <Loader/>
+
+      </div>
+    )}
+
+      </div>
+
+    </div>
+
+
+    <div className="mt-5 flex gap-5">
+
+    <button type="button" onClick={generateImage}>
+    {generatingImg ? 'generando...' : "generado"}
+    </button>
+
+    </div>
+
+    <div className="mt-10">
+    <p> una vez que ya hayas creado la imagen que deseas, puedes compartirla con..</p>
 
 
     </div>
