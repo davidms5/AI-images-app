@@ -21,11 +21,12 @@ const CrearPost = () =>{
   }
 
   const handleChange = e =>{
-
+    setForm({...form, [e.target.name]: e.target.value})
   }
 
   const handleSurpriseMe = () =>{
-
+    const randomPrompt = getRandomPrompt(form.prompt);
+    setForm({...form, prompt: randomPrompt})
   }
 
   const generateImage = () =>{
@@ -97,8 +98,16 @@ const CrearPost = () =>{
     </div>
 
     <div className="mt-10">
-    <p> una vez que ya hayas creado la imagen que deseas, puedes compartirla con..</p>
+    <p className='mt-2 text-[#666e75] text-[14px]'> una vez que ya hayas creado la imagen que deseas, 
+      puedes compartirla con otros en la comunidad</p>
 
+      <button
+      type='submit'
+      className='mt-3 text-white bg-[#6469ff] 
+      font-medium rounded-md text-sm w-full sm:auto
+      px-5 py-2.5 text-center'>
+
+      </button>
 
     </div>
 
