@@ -21,7 +21,9 @@ const CrearPost = () =>{
   }
 
   const handleChange = e =>{
-    setForm({...form, [e.target.name]: e.target.value})
+    setForm({...form, [e.target.name]: e.target.value}) //[e.target.name] puede referirse a cada valor que tenga el name en ese formulario en ese momento
+    //y esta entre [] para indicar que el valor especifico dentro del objeto setForm, en este caso el name: name y name: prompt del formulario
+    //ahora tendra el valor que el formulario reciba, el e.target.value
   }
 
   const handleSurpriseMe = () =>{
