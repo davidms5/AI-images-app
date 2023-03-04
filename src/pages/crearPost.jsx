@@ -16,6 +16,7 @@ const CrearPost = () =>{
 
   const [generatingImg, setGeneratingImg] = useState(false);
   const [loading, setLoading] = useState(false);
+
   const handleSubmit = () => {
 
   }
@@ -32,7 +33,18 @@ const CrearPost = () =>{
   }
 
   const generateImage = () =>{
+    if(form.prompt){
 
+      try{
+        setGeneratingImg(true);
+        const response = await fetch('http://localhost:8000/api/v1/dalle', {
+          method: 'POST',
+        })
+
+      } catch{
+
+      }
+    }
   }
 
   return (
